@@ -104,6 +104,35 @@ th,td{padding:8px 10px;text-align:right;border-bottom:1px solid #2d3148} th{colo
   </div>
 </div>
 
+<!-- БЛОК 4 ТРЕНЕРЫ -->
+<h2 class="section cyan">Блок 4 · Конверсия по тренерам (кто доводит новичка ВЗ→ВК→регуляр)</h2>
+<div class="grid2">
+  <div class="funnel">
+    <h3 style="font-size:13px;color:var(--muted);text-transform:uppercase;margin-bottom:14px">Когорта первого ВЗ с меткой тренера · янв'25–июн'26 (n=481)</h3>
+    <table>
+      <tr><th>Тренер</th><th>ВЗ</th><th>→ВК</th><th>→регуляр</th><th>активны</th><th>ср.виз</th></tr>
+      <tr><td><b>Мила Егорова</b></td><td>100</td><td class="pos">54%</td><td class="pos">58%</td><td class="pos">18%</td><td>9,6</td></tr>
+      <tr><td>Катя Плотникова</td><td>35</td><td>51%</td><td>60%</td><td>9%</td><td>9,0</td></tr>
+      <tr><td>Костя Клюшев</td><td>54</td><td>39%</td><td>48%</td><td>15%</td><td>6,5</td></tr>
+      <tr><td>Евгений Урманов</td><td>109</td><td>36%</td><td>41%</td><td>14%</td><td>9,3</td></tr>
+      <tr><td>Игорь Гревцов</td><td>154</td><td class="neg">35%</td><td class="neg">40%</td><td class="neg">10%</td><td class="neg">4,9</td></tr>
+      <tr><td>Марк Косарев</td><td>14</td><td>36%</td><td>36%</td><td class="neg">0%</td><td>3,1</td></tr>
+      <tr><td>Рита Сенченкова*</td><td>8</td><td>50%</td><td>75%</td><td>12%</td><td>7,5</td></tr>
+      <tr><td>Давид Чирцов*</td><td>7</td><td>43%</td><td>71%</td><td>14%</td><td>5,9</td></tr>
+      <tr style="border-top:2px solid #2d3148"><td><b>В среднем</b></td><td>481</td><td>41%</td><td>47%</td><td>13%</td><td>7,4</td></tr>
+    </table>
+    <p style="font-size:11px;color:var(--muted);margin-top:8px">* малая выборка (n&lt;10), проценты неустойчивы. Метка тренера стоит у 52% ВЗ. Сверка выручки с таблицей ЗП Drive: Рита 250 280 ₽ vs 263 000 ₽ (95%); у тренеров с группами метка занижает (тренер в названии услуги).</p>
+  </div>
+  <div class="chart-card"><h3>Конверсия ВЗ → ВК / регуляр / активны, по тренерам</h3><div class="chart-wrap" style="height:340px"><canvas id="trainerConv"></canvas></div>
+  <p style="font-size:11px;color:var(--muted);margin-top:8px">Показаны тренеры с ≥14 ВЗ. Размер круга/подпись — объём ВЗ.</p></div>
+</div>
+<div class="insights" style="margin-bottom:8px">
+  <div class="insight green"><b>Мила Егорова — лучший конвертер.</b> 100 ВЗ, →ВК 54%, →регуляр 58%, активны 18%, 9,6 визита/клиент. Выше среднего по всем этапам.</div>
+  <div class="insight red"><b>Игорь Гревцов — макс. объём, мин. отдача.</b> 154 ВЗ (треть всех), →ВК 35%, →регуляр 40%, активны 10%, 4,9 визита. Наибольший поток новичков с наихудшим удержанием.</div>
+  <div class="insight cyan"><b>Разброс конверсии ВЗ→ВК: 35–54%</b> при среднем 41%. Разница удержания (ср. визитов) — 3,1 до 9,6 (×3).</div>
+  <div class="insight orange"><b>Атрибуция.</b> 52% ВЗ с меткой тренера. Групповые тренировки кодируют тренера в названии услуги, не в метке → выручка тренеров с группами по меткам занижена. Проценты конверсии — внутри размеченной когорты.</div>
+</div>
+
 <!-- МЕТРИКИ -->
 <h2 class="section orange">Юнит-экономика: LTV · CAC · CRR · AOV</h2>
 <div class="kpi-grid">
@@ -191,5 +220,13 @@ new Chart(cmpYoY,{type:'bar',data:{labels:['ВЗ — попробовали','В
  plugins:{legend:{labels:{color:'#94a3b8'}},
   tooltip:{callbacks:{afterLabel:ctx=>ctx.dataIndex===0?'YoY −48%':ctx.dataIndex===1?'YoY −31%':'YoY −50%'}}},
  scales:{x:{ticks:{color:'#94a3b8'},grid:{color:grid}},y:{ticks:{color:tick},grid:{color:grid},title:{display:true,text:'уник. клиентов (май–авг)',color:tick}}}}});
+
+new Chart(trainerConv,{type:'bar',data:{labels:['Игорь (154)','Евгений (109)','Мила (100)','Костя (54)','Катя (35)','Марк (14)'],datasets:[
+ {label:'→ВК %',data:[35, 36, 54, 39, 51, 36],backgroundColor:'rgba(56,189,248,.85)'},
+ {label:'→регуляр %',data:[40, 41, 58, 48, 60, 36],backgroundColor:'rgba(34,197,94,.8)'},
+ {label:'активны %',data:[10, 14, 18, 15, 9, 0],backgroundColor:'rgba(245,158,11,.85)'}
+]},options:{responsive:true,maintainAspectRatio:false,
+ plugins:{legend:{labels:{color:'#94a3b8'}}},
+ scales:{x:{ticks:{color:'#94a3b8',font:{size:11}},grid:{color:grid}},y:{ticks:{color:tick,callback:v=>v+'%'},grid:{color:grid},max:70}}}});
 </script>
 </body></html>
