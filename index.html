@@ -1,0 +1,195 @@
+<!DOCTYPE html><html lang="ru"><head>
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="robots" content="noindex, nofollow">
+<title>S.Q. — Воронка новых клиентов · Маркетинг-аналитика 2026</title>
+<script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.0/dist/chart.umd.min.js"></script>
+<style>
+:root{--bg:#0f1117;--card:#1a1d27;--accent:#6c63ff;--green:#22c55e;--orange:#f59e0b;--red:#ef4444;--cyan:#38bdf8;--text:#e2e8f0;--muted:#64748b}
+*{box-sizing:border-box;margin:0;padding:0}
+body{background:var(--bg);color:var(--text);font-family:'Segoe UI',sans-serif;padding:24px;max-width:1200px;margin:0 auto}
+h1{font-size:26px;margin-bottom:4px}
+.subtitle{color:var(--muted);margin-bottom:24px;font-size:13px}
+h2.section{font-size:15px;font-weight:600;color:var(--muted);text-transform:uppercase;letter-spacing:.6px;margin:34px 0 14px;border-left:3px solid var(--accent);padding-left:12px}
+h2.section.green{border-color:var(--green)} h2.section.red{border-color:var(--red)} h2.section.orange{border-color:var(--orange)} h2.section.cyan{border-color:var(--cyan)}
+.kpi-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(180px,1fr));gap:14px;margin-bottom:8px}
+.kpi{background:var(--card);border-radius:12px;padding:16px 18px;border-left:4px solid var(--accent)}
+.kpi.green{border-color:var(--green)}.kpi.red{border-color:var(--red)}.kpi.orange{border-color:var(--orange)}.kpi.cyan{border-color:var(--cyan)}
+.kpi-value{font-size:25px;font-weight:700;margin-bottom:3px;line-height:1.1}
+.kpi-label{font-size:11px;color:var(--muted);text-transform:uppercase;letter-spacing:.5px;margin-bottom:6px}
+.kpi-sub{font-size:12px}
+.pos{color:var(--green)}.neg{color:var(--red)}.neu{color:var(--muted)}
+.chart-card{background:var(--card);border-radius:12px;padding:20px;margin-bottom:16px}
+.chart-card h3{font-size:13px;color:var(--muted);text-transform:uppercase;letter-spacing:.5px;margin-bottom:14px}
+.chart-wrap{position:relative;height:340px}
+.grid2{display:grid;grid-template-columns:1fr 1fr;gap:16px}
+@media(max-width:900px){.grid2{grid-template-columns:1fr}}
+.funnel{background:var(--card);border-radius:12px;padding:20px}
+.frow{display:flex;align-items:center;gap:12px;margin-bottom:10px;font-size:14px}
+.fbar{height:34px;border-radius:6px;display:flex;align-items:center;padding-left:12px;color:#fff;font-weight:600;font-size:13px;white-space:nowrap}
+.fname{width:230px;flex-shrink:0;color:var(--text)}
+.fpct{width:120px;text-align:right;color:var(--muted);font-size:13px;flex-shrink:0}
+.insights{background:var(--card);border-radius:12px;padding:22px}
+.insight{background:#12151f;border-radius:8px;padding:13px 15px;border-left:3px solid var(--accent);font-size:14px;line-height:1.6;margin-bottom:10px}
+.insight.green{border-color:var(--green)}.insight.red{border-color:var(--red)}.insight.orange{border-color:var(--orange)}.insight.cyan{border-color:var(--cyan)}
+table{width:100%;border-collapse:collapse;font-size:13px;margin-top:8px}
+th,td{padding:8px 10px;text-align:right;border-bottom:1px solid #2d3148} th{color:var(--muted);text-transform:uppercase;font-size:11px;letter-spacing:.5px} td:first-child,th:first-child{text-align:left}
+.verdict{background:linear-gradient(135deg,#1a1d27,#241a1a);border:1px solid #3a2020;border-radius:12px;padding:20px;margin-bottom:16px}
+</style></head><body>
+
+<h1>S.Q. — Воронка новых клиентов: ВЗ → ВК → удержание</h1>
+<p class="subtitle">Данные Yclients (2025–2026, только 2025+) · цены из прайса Yclients · модель по документу «Жизненный цикл клиента» · маркетинг Яндекс.Директ (MARK7EVEN, отчёты май–авг 2026) · обновлено 14.09.2026</p>
+
+<div class="insight cyan" style="margin-bottom:18px">
+<b>Модель воронки (S.Q.):</b> Лид → <b>ВЗ</b> вводное занятие, 1 тр. (2 590 ₽) → <b>ВК</b> вводный курс, 3 тр. (2 590 ₽/зан) → <b>Фаза 3</b> «Еще новичок, но уже чемпион» (3 500 ₽) → <b>Этап 2:</b> группа «Новички»/Beginners (1 990 ₽, отдельная услуга) · персональная · пакет «Уверенное начало» · аренда → продвинутые → C/B/A → турниры/абонементы.<br>
+<span style="color:var(--muted);font-size:12px">⚠️ До дек-2025 ВК писался в Yclients как несколько «Вводное занятие» → в отчёте ВК за 2025 реконструирован по поведению (клиент с ≥2 интро-занятиями), 2026 = отдельная услуга. «Группа Beginners» — НЕ вводный курс.</span>
+</div>
+
+<!-- БЛОК 1 KPI -->
+<h2 class="section green">Блок 1 · Привлечение новых клиентов за год</h2>
+<div class="kpi-grid">
+  <div class="kpi green"><div class="kpi-label">Новых клиентов 2026 (янв–авг)</div><div class="kpi-value">709</div><div class="kpi-sub neu">первый визит, 12+ мес lookback — надёжно</div></div>
+  <div class="kpi red"><div class="kpi-label">ВЗ — попробовали (янв–авг)</div><div class="kpi-value">323</div><div class="kpi-sub"><span class="neg">▼ 36%</span> YoY (2025: 503) · 2 590 ₽</div></div>
+  <div class="kpi red"><div class="kpi-label">ВК — взяли курс (янв–авг)</div><div class="kpi-value">133</div><div class="kpi-sub"><span class="neg">▼ 31%</span> YoY (2025: 194, реконстр.) · 2 590 ₽/зан</div></div>
+  <div class="kpi orange"><div class="kpi-label">Через ВЗ зашло новых</div><div class="kpi-value">37%</div><div class="kpi-sub neu">аренда 39% · группы 6% · прочее 18%</div></div>
+</div>
+
+<div class="chart-card"><h3>Новые клиенты по месяцам: ВЗ · ВК · всего новых · расход Директа</h3>
+<div class="chart-wrap"><canvas id="mainChart"></canvas></div></div>
+
+<div class="grid2">
+  <div class="chart-card"><h3>Вводные занятия (ВЗ): 2025 vs 2026</h3><div class="chart-wrap" style="height:280px"><canvas id="vzYoY"></canvas></div></div>
+  <div class="chart-card"><h3>Через что заходят новые клиенты 2026 (n=709)</h3><div class="chart-wrap" style="height:280px"><canvas id="entryDonut"></canvas></div></div>
+</div>
+
+<!-- СРАВНИТЕЛЬНЫЙ АНАЛИЗ 2025 vs 2026 -->
+<h2 class="section orange">Сравнительный анализ: прошлый год vs этот · май–авг (период новых маркетологов)</h2>
+<div class="grid2">
+  <div class="funnel">
+    <h3 style="font-size:13px;color:var(--muted);text-transform:uppercase;margin-bottom:14px">Привлечение май–авг (уник. клиентов)</h3>
+    <table>
+      <tr><th>Метрика</th><th>2025</th><th>2026</th><th>Δ</th></tr>
+      <tr><td>ВЗ — попробовали</td><td>217</td><td>113</td><td class="neg">−48%</td></tr>
+      <tr><td>ВК — взяли курс</td><td>74</td><td>51</td><td class="neg">−31%</td></tr>
+      <tr><td>Новые клиенты всего</td><td>544</td><td>270</td><td class="neg">−50%</td></tr>
+      <tr><td>Удержание новичка (≥2 визита)</td><td>53%</td><td>37%</td><td class="neg">−16 пп</td></tr>
+    </table>
+    <div class="insight orange" style="margin-top:16px"><b>ВК — не новый продукт, а сокращающийся поток.</b> До дек-2025 курс писался в Yclients как несколько «Вводное занятие» → реконструирован по поведению. Из 133 ВК за янв–авг 2026 <b>80% (107) — продолжение ВЗ</b>, 20% (26) — сразу курс. Весь вход обвалился YoY (ВЗ −48%, ВК −31%, новые −50%) + новичок хуже закрепляется (2-й визит 53%→37%).</div>
+  </div>
+  <div class="chart-card"><h3>ВЗ · ВК · Новые клиенты — май–авг: 2025 vs 2026</h3><div class="chart-wrap" style="height:300px"><canvas id="cmpYoY"></canvas></div>
+  <p style="font-size:11px;color:var(--muted);margin-top:8px">ВК реконструирован единообразно: 2025 = клиенты с ≥2 интро-занятиями (курс писался как ВЗ), 2026 = услуга «Вводный курс_одно занятие». Данные Yclients, май–авг без сезонного искажения.</p></div>
+</div>
+
+<!-- БЛОК 2 воронка -->
+<h2 class="section cyan">Блок 2 · Конверсия воронки (когорта первого ВЗ)</h2>
+<div class="grid2">
+  <div class="funnel"><h3 style="font-size:13px;color:var(--muted);text-transform:uppercase;margin-bottom:14px">Когорта H1 2026 · 244 чел (первый ВЗ янв–июн, вызрели 3–8 мес)</h3>
+    <div class="frow"><span class="fname">Пришли на ВЗ</span><div class="fbar" style="width:100%;background:var(--accent)">244</div><span class="fpct">100%</span></div>
+    <div class="frow"><span class="fname">Вернулись ≥1 раз</span><div class="fbar" style="width:54%;background:var(--cyan)">132</div><span class="fpct">54%</span></div>
+    <div class="frow"><span class="fname">Взяли ВК (вводный курс)</span><div class="fbar" style="width:40%;background:#a78bfa">98</div><span class="fpct">40%</span></div>
+    <div class="frow"><span class="fname">Стали регуляром (≥3 виз.)</span><div class="fbar" style="width:45%;background:var(--green)">110</div><span class="fpct">45%</span></div>
+    <div class="frow"><span class="fname">Дошли до аренды корта</span><div class="fbar" style="width:26%;background:var(--orange)">63</div><span class="fpct">26%</span></div>
+    <div class="frow"><span class="fname">Дошли до тренировок</span><div class="fbar" style="width:14%;background:#f472b6">34</div><span class="fpct">14%</span></div>
+    <div class="frow"><span class="fname">Ещё активны (визит ≤45 дн)</span><div class="fbar" style="width:11%;background:var(--red)">27</div><span class="fpct">11%</span></div>
+  </div>
+  <div class="funnel"><h3 style="font-size:13px;color:var(--muted);text-transform:uppercase;margin-bottom:14px">Сравнение когорт H1 2025 vs H1 2026 (сопоставимо)</h3>
+    <table>
+      <tr><th>Этап</th><th>H1'25 (349)</th><th>H1'26 (244)</th><th>Δ</th></tr>
+      <tr><td>Вернулись после ВЗ</td><td>65%</td><td>54%</td><td class="neg">−11 пп</td></tr>
+      <tr><td>Взяли ВК</td><td>42%</td><td>40%</td><td class="neg">−2 пп</td></tr>
+      <tr><td>Стали регуляром ≥3</td><td>57%</td><td>45%</td><td class="neg">−12 пп</td></tr>
+      <tr><td>Дошли до аренды</td><td>44%</td><td>26%</td><td class="neg">−18 пп</td></tr>
+      <tr><td>Дошли до тренировок</td><td>28%</td><td>14%</td><td class="neg">−14 пп</td></tr>
+    </table>
+    <div class="insight cyan" style="margin-top:16px">Обе когорты — первое полугодие (сопоставимо), ВК реконструирован единообразно. Конверсия ВЗ→ВК стабильна (42%→40%), но <b>дальше по воронке всё просело</b>: возврат 65%→54%, регуляр 57%→45%, аренда 44%→26%, тренировки 28%→14%. Новичок доходит до курса, но <b>не закрепляется в клубе</b>. H1'26 чуть недозрел (апр–июн), т.е. реальный разрыв не больше показанного.</div>
+  </div>
+</div>
+
+<!-- МЕТРИКИ -->
+<h2 class="section orange">Юнит-экономика: LTV · CAC · CRR · AOV</h2>
+<div class="kpi-grid">
+  <div class="kpi green"><div class="kpi-label">AOV — средний чек / визит</div><div class="kpi-value">2 631 ₽</div><div class="kpi-sub neu">касса 39,1 млн / 14 873 визита (12 мес)</div></div>
+  <div class="kpi green"><div class="kpi-label">LTV — годовой (top-down)</div><div class="kpi-value">20 900 ₽</div><div class="kpi-sub neu">касса/клиент · 8,0 визита/год</div></div>
+  <div class="kpi green"><div class="kpi-label">LTV / CAC</div><div class="kpi-value">≈ 30:1</div><div class="kpi-sub neu">привлечение прибыльно — если удержать</div></div>
+  <div class="kpi orange"><div class="kpi-label">CRR — месячное удержание ядра</div><div class="kpi-value">57%</div><div class="kpi-sub neu">2026 среднее (52–62%) · стабильно</div></div>
+  <div class="kpi cyan"><div class="kpi-label">CAC — новый клиент (Директ)</div><div class="kpi-value">667 ₽</div><div class="kpi-sub neu">180 110 ₽ / 270 новых (май–авг) · часть — сарафан</div></div>
+  <div class="kpi red"><div class="kpi-label">Удержание новичка (2-й визит)</div><div class="kpi-value">37%</div><div class="kpi-sub"><span class="neg">▼ с 53%</span> (2025) — новички хуже закрепляются</div></div>
+</div>
+
+<!-- ОЦЕНКА МАРКЕТОЛОГОВ -->
+<h2 class="section red">Оценка работы маркетологов (MARK7EVEN, с мая 2026)</h2>
+
+<h3 style="color:var(--muted);font-size:13px;margin:14px 0 8px;text-transform:uppercase;letter-spacing:.5px">1. Помесячно: расход vs реальный результат</h3>
+<div class="verdict">
+<table>
+  <tr><th>Показатель</th><th>Май*</th><th>Июнь</th><th>Июль</th><th>Август</th><th>Что значит</th></tr>
+  <tr><td>Расход Директа</td><td>7 595 ₽</td><td>51 292 ₽</td><td>66 875 ₽</td><td>54 348 ₽</td><td style="text-align:left;color:var(--muted)">Итого май–авг: <b>180 110 ₽</b></td></tr>
+  <tr><td>Заявки (их метрика)</td><td>11</td><td>31</td><td>62</td><td>64</td><td style="text-align:left;color:var(--green)">Итого <b>168</b> · CPA заявки 849–1079 ₽</td></tr>
+  <tr><td>ВЗ — попробовали (Yclients)</td><td>34</td><td>22</td><td>35</td><td>22</td><td style="text-align:left;color:var(--red)">падают</td></tr>
+  <tr><td>ВК — взяли курс (Yclients)</td><td>14</td><td>10</td><td>15</td><td>12</td><td style="text-align:left;color:var(--red)">падают</td></tr>
+  <tr><td>Новые всего (Yclients)</td><td>67</td><td>64</td><td>85</td><td>54</td><td style="text-align:left;color:var(--red)">падают</td></tr>
+  <tr><td>CAC дошедшего (расход/новые)</td><td>113 ₽</td><td>801 ₽</td><td>787 ₽</td><td>1 006 ₽</td><td style="text-align:left;color:var(--orange)">blended май–авг <b>667 ₽</b></td></tr>
+  <tr><td>CAC по ВЗ (расход/ВЗ)</td><td>223 ₽</td><td>2 331 ₽</td><td>1 911 ₽</td><td>2 470 ₽</td><td style="text-align:left;color:var(--orange)">заявка ≠ клиент: разрыв ×2,3–2,9</td></tr>
+</table>
+<p style="font-size:11px;color:var(--muted);margin:6px 2px 0">* Май — запуск 27.05, ~4 дня открута → малый расход. &nbsp; Все 4 отчёта MARK7EVEN получены (май–авг). &nbsp; ⚠️ В отдельном июльском отчёте РСЯ показан с фильтром «клики&gt;10» (48,7к/41 лид), в августовском сравнении июль полный — 66,9к/62 (ретаргетинг + догруженные конверсии). Взят полный.</p>
+</div>
+
+<h3 style="color:var(--muted);font-size:13px;margin:22px 0 8px;text-transform:uppercase;letter-spacing:.5px">2. До агентства vs при агентстве (2026)</h3>
+<div class="verdict">
+<table>
+  <tr><th>Метрика (среднее/мес)</th><th>До MARK7EVEN (янв–апр)</th><th>При MARK7EVEN (май–авг)</th><th>Δ</th></tr>
+  <tr><td>Вводные занятия ВЗ</td><td>54</td><td>28</td><td style="text-align:left;color:var(--red)">−48%</td></tr>
+  <tr><td>Новые клиенты всего</td><td>110</td><td>68</td><td style="text-align:left;color:var(--red)">−38%</td></tr>
+</table>
+</div>
+
+<h3 style="color:var(--muted);font-size:13px;margin:22px 0 8px;text-transform:uppercase;letter-spacing:.5px">3. Like-for-like YoY (май–авг, снимает сезонность)</h3>
+<div class="verdict">
+<table>
+  <tr><th>Метрика (сумма май–авг)</th><th>2025</th><th>2026</th><th>Δ</th></tr>
+  <tr><td>Вводные занятия ВЗ</td><td>298</td><td>113</td><td style="text-align:left;color:var(--red)">−62%</td></tr>
+  <tr><td>Новые клиенты всего</td><td>544</td><td>270</td><td style="text-align:left;color:var(--red)">−50%</td></tr>
+</table>
+</div>
+
+<div class="insights">
+  <div class="insight orange"><b>Метрики кампаний.</b> CTR Поиск 11,7%→19,0%. Средняя позиция 4,11→2,22. CPA заявки 1 079→849 ₽. Работы по отчётам: чистка площадок РСЯ, ретаргетинг, отдельная РК на новичков.</div>
+  <div class="insight red"><b>Заявки vs визиты.</b> Август: 64 заявки, 22 ВЗ, 54 новых клиента. CAC дошедшего 1 006 ₽, по ВЗ 2 470 ₽. CPA заявки по отчёту 849 ₽.</div>
+  <div class="insight red"><b>Динамика входа YoY (май–авг).</b> ВЗ −48% (217→113). ВК −31% (74→51). Новые клиенты −50% (544→270). Расход Директа 51–67к ₽/мес.</div>
+  <div class="insight red"><b>Сезонность.</b> Летняя выручка сквоша −25% (рыночный ориентир). Расход Директа май–авг равномерный: 51–67к ₽/мес.</div>
+  <div class="insight cyan"><b>Атрибуция.</b> Заявки Директа не сопоставлены с визитами Yclients. CPA заявки отражает лид, не оплатившего клиента.</div>
+  <div class="insight orange"><b>Факторы спада.</b> Сезон, снижение входящего потока, конкуренция (October, Оптик В.О.), ценообразование. Разделение вкладов требует матчинга заявок по телефону. Расход предыдущего агентства (до мая) не предоставлен.</div>
+  <div class="insight green"><b>Юнит-экономика.</b> LTV годовой 20 900 ₽, CAC 667 ₽, LTV/CAC ≈ 31:1. Удержание новичка (2-й визит) 53%→37% YoY.</div>
+</div>
+
+<script>
+const L26=["Янв'26", "Фев'26", "Мар'26", "Апр'26", "Май'26", "Июн'26", "Июл'26", "Авг'26"];
+const grid='rgba(255,255,255,0.06)',tick='#64748b';
+new Chart(mainChart,{data:{labels:L26,datasets:[
+ {type:'bar',label:'ВЗ — попробовали',data:[57, 49, 68, 36, 34, 22, 35, 22],backgroundColor:'rgba(108,99,255,.85)',yAxisID:'y',order:3},
+ {type:'bar',label:'ВК — взяли курс',data:[20, 20, 25, 17, 14, 10, 15, 12],backgroundColor:'rgba(56,189,248,.85)',yAxisID:'y',order:3},
+ {type:'line',label:'Новых всего',data:[130, 98, 126, 85, 67, 64, 85, 54],borderColor:'#22c55e',backgroundColor:'rgba(34,197,94,.1)',tension:.35,yAxisID:'y',order:1,pointRadius:4},
+ {type:'line',label:'Расход Директа ₽',data:[null, null, null, null, 7595, 51292, 66875, 54348],borderColor:'#f59e0b',borderDash:[5,4],tension:.2,yAxisID:'y1',order:0,pointRadius:5,spanGaps:true}
+]},options:{responsive:true,maintainAspectRatio:false,
+ plugins:{legend:{labels:{color:'#94a3b8'}}},
+ scales:{x:{ticks:{color:tick},grid:{color:grid}},
+  y:{position:'left',ticks:{color:tick},grid:{color:grid},title:{display:true,text:'клиенты',color:tick}},
+  y1:{position:'right',ticks:{color:'#f59e0b',callback:v=>(v/1000)+'к'},grid:{display:false},title:{display:true,text:'₽ Директ',color:'#f59e0b'}}}}});
+
+new Chart(vzYoY,{type:'bar',data:{labels:["Янв", "Фев", "Мар", "Апр", "Май", "Июн", "Июл", "Авг", "Сен", "Окт", "Ноя", "Дек"],datasets:[
+ {label:'2025',data:[72, 66, 83, 65, 63, 45, 43, 66, 61, 52, 51, 38],backgroundColor:'rgba(100,116,139,.7)'},
+ {label:'2026',data:[57, 49, 68, 36, 34, 22, 35, 22, null, null, null, null],backgroundColor:'rgba(239,68,68,.85)'}
+]},options:{responsive:true,maintainAspectRatio:false,plugins:{legend:{labels:{color:'#94a3b8'}}},scales:{x:{ticks:{color:tick},grid:{color:grid}},y:{ticks:{color:tick},grid:{color:grid}}}}});
+
+new Chart(entryDonut,{type:'doughnut',data:{labels:['Аренда 39%','ВЗ 37%','Группы 6%','Прочее 5%','Турнир 3%','Клубный 3%','ВК 3%','Тренировка 3%','Детское 1%'],
+ datasets:[{data:[279,264,39,38,23,20,20,19,7],backgroundColor:['#f59e0b','#6c63ff','#22c55e','#64748b','#38bdf8','#a78bfa','#0ea5e9','#f472b6','#94a3b8']}]},
+ options:{responsive:true,maintainAspectRatio:false,plugins:{legend:{position:'right',labels:{color:'#94a3b8',font:{size:11}}}}}});
+
+new Chart(cmpYoY,{type:'bar',data:{labels:['ВЗ — попробовали','ВК — взяли курс','Новые клиенты всего'],datasets:[
+ {label:'2025',data:[217, 74, 544],backgroundColor:'rgba(100,116,139,.75)'},
+ {label:'2026',data:[113, 51, 270],backgroundColor:'rgba(239,68,68,.85)'}
+]},options:{responsive:true,maintainAspectRatio:false,
+ plugins:{legend:{labels:{color:'#94a3b8'}},
+  tooltip:{callbacks:{afterLabel:ctx=>ctx.dataIndex===0?'YoY −48%':ctx.dataIndex===1?'YoY −31%':'YoY −50%'}}},
+ scales:{x:{ticks:{color:'#94a3b8'},grid:{color:grid}},y:{ticks:{color:tick},grid:{color:grid},title:{display:true,text:'уник. клиентов (май–авг)',color:tick}}}}});
+</script>
+</body></html>
