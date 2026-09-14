@@ -219,13 +219,17 @@ new Chart(entryDonut,{type:'doughnut',data:{labels:['Аренда 39%','ВЗ 37%
  datasets:[{data:[279,264,39,38,23,20,20,19,7],backgroundColor:['#f59e0b','#6c63ff','#22c55e','#64748b','#38bdf8','#a78bfa','#0ea5e9','#f472b6','#94a3b8']}]},
  options:{responsive:true,maintainAspectRatio:false,plugins:{legend:{position:'right',labels:{color:'#94a3b8',font:{size:11}}}}}});
 
+const cmpDrop=['−48%','−31%','−50%'];
 new Chart(cmpYoY,{type:'bar',data:{labels:['ВЗ — попробовали','ВК — взяли курс','Новые клиенты всего'],datasets:[
  {label:'2025',data:[217, 74, 544],backgroundColor:'rgba(100,116,139,.75)'},
  {label:'2026',data:[113, 51, 270],backgroundColor:'rgba(239,68,68,.85)'}
-]},options:{responsive:true,maintainAspectRatio:false,
+]},plugins:[ChartDataLabels],options:{responsive:true,maintainAspectRatio:false,
  plugins:{legend:{labels:{color:'#94a3b8'}},
-  tooltip:{callbacks:{afterLabel:ctx=>ctx.dataIndex===0?'YoY −48%':ctx.dataIndex===1?'YoY −31%':'YoY −50%'}}},
- scales:{x:{ticks:{color:'#94a3b8'},grid:{color:grid}},y:{ticks:{color:tick},grid:{color:grid},title:{display:true,text:'уник. клиентов (май–авг)',color:tick}}}}});
+  datalabels:{anchor:'end',align:'top',font:{size:11,weight:'bold'},
+   color:ctx=>ctx.datasetIndex===1?'#ef4444':'#94a3b8',
+   formatter:(v,ctx)=>ctx.datasetIndex===1?v+'  '+cmpDrop[ctx.dataIndex]:v},
+  tooltip:{callbacks:{afterLabel:ctx=>ctx.datasetIndex===1?'YoY '+cmpDrop[ctx.dataIndex]:''}}},
+ scales:{x:{ticks:{color:'#94a3b8'},grid:{color:grid}},y:{suggestedMax:620,ticks:{color:tick},grid:{color:grid},title:{display:true,text:'уник. клиентов (май–авг)',color:tick}}}}});
 
 (function(){
  const L20=["Янв'25","Фев'25","Мар'25","Апр'25","Май'25","Июн'25","Июл'25","Авг'25","Сен'25","Окт'25","Ноя'25","Дек'25","Янв'26","Фев'26","Мар'26","Апр'26","Май'26","Июн'26","Июл'26","Авг'26"];
