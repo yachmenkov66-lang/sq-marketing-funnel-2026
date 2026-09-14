@@ -3,6 +3,7 @@
 <meta name="robots" content="noindex, nofollow">
 <title>S.Q. — Воронка новых клиентов · Маркетинг-аналитика 2026</title>
 <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.0/dist/chart.umd.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/chartjs-plugin-datalabels@2.2.0/dist/chartjs-plugin-datalabels.min.js"></script>
 <style>
 :root{--bg:#0f1117;--card:#1a1d27;--accent:#6c63ff;--green:#22c55e;--orange:#f59e0b;--red:#ef4444;--cyan:#38bdf8;--text:#e2e8f0;--muted:#64748b}
 *{box-sizing:border-box;margin:0;padding:0}
@@ -231,9 +232,12 @@ new Chart(cmpYoY,{type:'bar',data:{labels:['ВЗ — попробовали','В
  const vz=[72,66,83,65,63,45,43,66,61,52,51,38,57,49,68,36,34,22,35,22];
  const cols=L20.map((_,i)=>i<12?'rgba(100,116,139,.75)':'rgba(239,68,68,.85)');
  new Chart(vzTimeline,{type:'bar',data:{labels:L20,datasets:[{label:'ВЗ — попробовали',data:vz,backgroundColor:cols,borderRadius:3}]},
+  plugins:[ChartDataLabels],
   options:{responsive:true,maintainAspectRatio:false,
-   plugins:{legend:{display:false},tooltip:{callbacks:{afterLabel:ctx=>{const i=ctx.dataIndex; if(i>=12){const p=vz[i-12]; return 'к '+L20[i-12]+': '+(p?Math.round((vz[i]/p-1)*100):0)+'%';} return '';}}}},
-   scales:{x:{ticks:{color:tick,maxRotation:60,font:{size:10}},grid:{color:grid}},y:{ticks:{color:tick},grid:{color:grid},title:{display:true,text:'ВЗ / мес',color:tick}}}}});
+   plugins:{legend:{display:false},
+    datalabels:{anchor:'end',align:'top',offset:0,color:'#e2e8f0',font:{size:11,weight:'bold'},formatter:v=>v},
+    tooltip:{callbacks:{afterLabel:ctx=>{const i=ctx.dataIndex; if(i>=12){const p=vz[i-12]; return 'к '+L20[i-12]+': '+(p?Math.round((vz[i]/p-1)*100):0)+'%';} return '';}}}},
+   scales:{x:{ticks:{color:tick,maxRotation:60,font:{size:10}},grid:{color:grid}},y:{suggestedMax:95,ticks:{color:tick},grid:{color:grid},title:{display:true,text:'ВЗ / мес',color:tick}}}}});
 })();
 
 new Chart(trainerConv,{type:'bar',data:{labels:['Игорь (154)','Евгений (109)','Мила (100)','Костя (54)','Катя (35)','Марк (14)'],datasets:[
