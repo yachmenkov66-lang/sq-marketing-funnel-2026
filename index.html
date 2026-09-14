@@ -79,6 +79,11 @@ th,td{padding:8px 10px;text-align:right;border-bottom:1px solid #2d3148} th{colo
   <p style="font-size:11px;color:var(--muted);margin-top:8px">ВК реконструирован единообразно: 2025 = клиенты с ≥2 интро-занятиями (курс писался как ВЗ), 2026 = услуга «Вводный курс_одно занятие». Данные Yclients, май–авг без сезонного искажения.</p></div>
 </div>
 
+<!-- ВЗ ДИНАМИКА ГОД К ГОДУ -->
+<h2 class="section red">Вводные занятия — динамика год к году (янв 2025 → авг 2026)</h2>
+<div class="chart-card"><h3>ВЗ по месяцам, непрерывно · 2025 (серый) → 2026 (красный)</h3><div class="chart-wrap"><canvas id="vzTimeline"></canvas></div>
+<p style="font-size:12px;color:var(--muted);margin-top:8px"><b>Янв–авг: 503 ВЗ (2025) → 323 (2026) — <span class="neg">−36%</span>.</b> Среднемесячно 63 → 40. Пик обоих лет — март (83 / 68). Дно 2026 — июнь (22).</p></div>
+
 <!-- БЛОК 2 воронка -->
 <h2 class="section cyan">Блок 2 · Конверсия воронки (когорта первого ВЗ)</h2>
 <div class="grid2">
@@ -220,6 +225,16 @@ new Chart(cmpYoY,{type:'bar',data:{labels:['ВЗ — попробовали','В
  plugins:{legend:{labels:{color:'#94a3b8'}},
   tooltip:{callbacks:{afterLabel:ctx=>ctx.dataIndex===0?'YoY −48%':ctx.dataIndex===1?'YoY −31%':'YoY −50%'}}},
  scales:{x:{ticks:{color:'#94a3b8'},grid:{color:grid}},y:{ticks:{color:tick},grid:{color:grid},title:{display:true,text:'уник. клиентов (май–авг)',color:tick}}}}});
+
+(function(){
+ const L20=["Янв'25","Фев'25","Мар'25","Апр'25","Май'25","Июн'25","Июл'25","Авг'25","Сен'25","Окт'25","Ноя'25","Дек'25","Янв'26","Фев'26","Мар'26","Апр'26","Май'26","Июн'26","Июл'26","Авг'26"];
+ const vz=[72,66,83,65,63,45,43,66,61,52,51,38,57,49,68,36,34,22,35,22];
+ const cols=L20.map((_,i)=>i<12?'rgba(100,116,139,.75)':'rgba(239,68,68,.85)');
+ new Chart(vzTimeline,{type:'bar',data:{labels:L20,datasets:[{label:'ВЗ — попробовали',data:vz,backgroundColor:cols,borderRadius:3}]},
+  options:{responsive:true,maintainAspectRatio:false,
+   plugins:{legend:{display:false},tooltip:{callbacks:{afterLabel:ctx=>{const i=ctx.dataIndex; if(i>=12){const p=vz[i-12]; return 'к '+L20[i-12]+': '+(p?Math.round((vz[i]/p-1)*100):0)+'%';} return '';}}}},
+   scales:{x:{ticks:{color:tick,maxRotation:60,font:{size:10}},grid:{color:grid}},y:{ticks:{color:tick},grid:{color:grid},title:{display:true,text:'ВЗ / мес',color:tick}}}}});
+})();
 
 new Chart(trainerConv,{type:'bar',data:{labels:['Игорь (154)','Евгений (109)','Мила (100)','Костя (54)','Катя (35)','Марк (14)'],datasets:[
  {label:'→ВК %',data:[35, 36, 54, 39, 51, 36],backgroundColor:'rgba(56,189,248,.85)'},
