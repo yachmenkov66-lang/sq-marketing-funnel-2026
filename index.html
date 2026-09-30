@@ -48,7 +48,7 @@ th,td{padding:8px 10px;text-align:right;border-bottom:1px solid #2d3148} th{colo
 <!-- БЛОК 1 KPI -->
 <h2 class="section green">Блок 1 · Привлечение новых клиентов за год</h2>
 <div class="kpi-grid">
-  <div class="kpi green"><div class="kpi-label">Новых клиентов 2026 (янв–сен)</div><div class="kpi-value">766</div><div class="kpi-sub neu">первый визит, 12+ мес lookback — надёжно</div></div>
+  <div class="kpi green"><div class="kpi-label">Новых клиентов 2026 (янв–сен)</div><div class="kpi-value">766</div><div class="kpi-sub neu">первый визит, lookback с 01.2025 (для 2026 — 12+ мес). Для янв–дек 2025 lookback короче 12 мес (данные с 01.2025), часть «новых» начала 2025 — вернувшиеся клиенты 2024</div></div>
   <div class="kpi red"><div class="kpi-label">ВЗ — попробовали (янв–сен)</div><div class="kpi-value">348</div><div class="kpi-sub"><span class="neg">▼ 38%</span> YoY (2025: 564) · 2 590 ₽</div></div>
   <div class="kpi red"><div class="kpi-label">ВК — взяли курс (янв–сен)</div><div class="kpi-value">148</div><div class="kpi-sub"><span class="neg">▼ 36%</span> YoY (2025: 232, реконстр.) · 2 590 ₽/зан</div></div>
   <div class="kpi orange"><div class="kpi-label">Через ВЗ зашло новых</div><div class="kpi-value">37%</div><div class="kpi-sub neu">аренда 40% · группы 5% · прочее 18%</div></div>
@@ -71,13 +71,13 @@ th,td{padding:8px 10px;text-align:right;border-bottom:1px solid #2d3148} th{colo
       <tr><th>Метрика</th><th>2025</th><th>2026</th><th>Δ</th></tr>
       <tr><td>ВЗ — попробовали</td><td>278</td><td>138</td><td class="neg">−50%</td></tr>
       <tr><td>ВК — взяли курс</td><td>112</td><td>66</td><td class="neg">−41%</td></tr>
-      <tr><td>Новые клиенты всего</td><td>666</td><td>327</td><td class="neg">−51%</td></tr>
+      <tr><td>Новые клиенты всего*</td><td>666</td><td>327</td><td class="neg">−51%</td></tr>
       <tr><td>Удержание новичка (≥2 визита)</td><td>54%</td><td>39%</td><td class="neg">−15 пп</td></tr>
     </table>
     <div class="insight orange" style="margin-top:16px"><b>ВК — не новый продукт, а сокращающийся поток.</b> До дек-2025 курс писался в Yclients как несколько «Вводное занятие» → реконструирован по поведению. Из 148 ВК за янв–сен 2026 <b>82% (121) — продолжение ВЗ</b>, 18% (27) — сразу курс. Весь вход обвалился YoY (ВЗ −50%, ВК −41%, новые −51%) + новичок хуже закрепляется (2-й визит 54%→39%; у новичков сентября окно наблюдения ≤1 мес).</div>
   </div>
   <div class="chart-card"><h3>ВЗ · ВК · Новые клиенты — май–сен: 2025 vs 2026</h3><div class="chart-wrap" style="height:300px"><canvas id="cmpYoY"></canvas></div>
-  <p style="font-size:11px;color:var(--muted);margin-top:8px">ВК реконструирован единообразно: 2025 = клиенты с ≥2 интро-занятиями (курс писался как ВЗ), 2026 = услуга «Вводный курс_одно занятие». Данные Yclients, май–сен без сезонного искажения.</p></div>
+  <p style="font-size:11px;color:var(--muted);margin-top:8px">ВК реконструирован единообразно: 2025 = клиенты с ≥2 интро-занятиями (курс писался как ВЗ), 2026 = услуга «Вводный курс_одно занятие». Данные Yclients, май–сен без сезонного искажения. * новые 2025: lookback &lt;12 мес (данные с 01.2025) — часть «новых» начала 2025 = вернувшиеся клиенты 2024.</p></div>
 </div>
 
 <!-- ВЗ ДИНАМИКА ГОД К ГОДУ -->
@@ -88,25 +88,25 @@ th,td{padding:8px 10px;text-align:right;border-bottom:1px solid #2d3148} th{colo
 <!-- БЛОК 2 воронка -->
 <h2 class="section cyan">Блок 2 · Конверсия воронки (когорта первого ВЗ)</h2>
 <div class="grid2">
-  <div class="funnel"><h3 style="font-size:13px;color:var(--muted);text-transform:uppercase;margin-bottom:14px">Когорта H1 2026 · 244 чел (первый ВЗ янв–май, вызрели 4–9 мес, данные по 30.09)</h3>
-    <div class="frow"><span class="fname">Пришли на ВЗ</span><div class="fbar" style="width:100%;background:var(--accent)">244</div><span class="fpct">100%</span></div>
-    <div class="frow"><span class="fname">Вернулись ≥1 раз</span><div class="fbar" style="width:54%;background:var(--cyan)">131</div><span class="fpct">54%</span></div>
-    <div class="frow"><span class="fname">Взяли ВК (вводный курс)</span><div class="fbar" style="width:40%;background:#a78bfa">97</div><span class="fpct">40%</span></div>
-    <div class="frow"><span class="fname">Стали регуляром (≥3 виз.)</span><div class="fbar" style="width:45%;background:var(--green)">110</div><span class="fpct">45%</span></div>
-    <div class="frow"><span class="fname">Дошли до аренды корта</span><div class="fbar" style="width:27%;background:var(--orange)">65</div><span class="fpct">27%</span></div>
-    <div class="frow"><span class="fname">Дошли до тренировок</span><div class="fbar" style="width:14%;background:#f472b6">35</div><span class="fpct">14%</span></div>
-    <div class="frow"><span class="fname">Ещё активны (визит ≤45 дн)</span><div class="fbar" style="width:7%;background:var(--red)">18</div><span class="fpct">7%</span></div>
+  <div class="funnel"><h3 style="font-size:13px;color:var(--muted);text-transform:uppercase;margin-bottom:14px">Когорта H1 2026 · 266 чел (первый ВЗ янв–июн, вызрели 3–9 мес, данные по 30.09)</h3>
+    <div class="frow"><span class="fname">Пришли на ВЗ</span><div style="flex:1;min-width:0"><div class="fbar" style="width:100%;background:var(--accent)">266</div></div><span class="fpct">100%</span></div>
+    <div class="frow"><span class="fname">Вернулись ≥1 раз</span><div style="flex:1;min-width:0"><div class="fbar" style="width:53%;background:var(--cyan)">140</div></div><span class="fpct">53%</span></div>
+    <div class="frow"><span class="fname">Взяли ВК (вводный курс)</span><div style="flex:1;min-width:0"><div class="fbar" style="width:39%;background:#a78bfa">104</div></div><span class="fpct">39%</span></div>
+    <div class="frow"><span class="fname">Стали регуляром (≥3 виз.)</span><div style="flex:1;min-width:0"><div class="fbar" style="width:45%;background:var(--green)">119</div></div><span class="fpct">45%</span></div>
+    <div class="frow"><span class="fname">Дошли до аренды корта</span><div style="flex:1;min-width:0"><div class="fbar" style="width:27%;background:var(--orange)">73</div></div><span class="fpct">27%</span></div>
+    <div class="frow"><span class="fname">Дошли до тренировок</span><div style="flex:1;min-width:0"><div class="fbar" style="width:16%;background:#f472b6">43</div></div><span class="fpct">16%</span></div>
+    <div class="frow"><span class="fname">Ещё активны (визит ≤45 дн)</span><div style="flex:1;min-width:0"><div class="fbar" style="width:10%;background:var(--red)">26</div></div><span class="fpct">10%</span></div>
   </div>
-  <div class="funnel"><h3 style="font-size:13px;color:var(--muted);text-transform:uppercase;margin-bottom:14px">Сравнение когорт H1 2025 vs H1 2026 (сопоставимо, первый ВЗ янв–май)</h3>
+  <div class="funnel"><h3 style="font-size:13px;color:var(--muted);text-transform:uppercase;margin-bottom:14px">Сравнение когорт H1 2025 vs H1 2026 (сопоставимо, первый ВЗ янв–июн)</h3>
     <table>
-      <tr><th>Этап</th><th>H1'25 (349)</th><th>H1'26 (244)</th><th>Δ</th></tr>
-      <tr><td>Вернулись после ВЗ</td><td>65%</td><td>54%</td><td class="neg">−11 пп</td></tr>
-      <tr><td>Взяли ВК</td><td>42%</td><td>40%</td><td class="neg">−2 пп</td></tr>
-      <tr><td>Стали регуляром ≥3</td><td>57%</td><td>45%</td><td class="neg">−12 пп</td></tr>
-      <tr><td>Дошли до аренды</td><td>44%</td><td>27%</td><td class="neg">−17 пп</td></tr>
-      <tr><td>Дошли до тренировок</td><td>28%</td><td>14%</td><td class="neg">−14 пп</td></tr>
+      <tr><th>Этап</th><th>H1'25 (394)</th><th>H1'26 (266)</th><th>Δ</th></tr>
+      <tr><td>Вернулись после ВЗ</td><td>63%</td><td>53%</td><td class="neg">−10 пп</td></tr>
+      <tr><td>Взяли ВК</td><td>39%</td><td>39%</td><td class="neu">0 пп</td></tr>
+      <tr><td>Стали регуляром ≥3</td><td>55%</td><td>45%</td><td class="neg">−10 пп</td></tr>
+      <tr><td>Дошли до аренды</td><td>42%</td><td>27%</td><td class="neg">−15 пп</td></tr>
+      <tr><td>Дошли до тренировок</td><td>26%</td><td>16%</td><td class="neg">−10 пп</td></tr>
     </table>
-    <div class="insight cyan" style="margin-top:16px">Обе когорты — первое полугодие (сопоставимо), ВК реконструирован единообразно. Конверсия ВЗ→ВК стабильна (42%→40%), но <b>дальше по воронке всё просело</b>: возврат 65%→54%, регуляр 57%→45%, аренда 44%→27%, тренировки 28%→14%. Новичок доходит до курса, но <b>не закрепляется в клубе</b>. H1'26 чуть недозрел (апр–май), т.е. реальный разрыв не больше показанного.</div>
+    <div class="insight cyan" style="margin-top:16px">Обе когорты — первое полугодие (сопоставимо), ВК реконструирован единообразно. Конверсия ВЗ→ВК стабильна (39%→39%), но <b>дальше по воронке всё просело</b>: возврат 63%→53%, регуляр 55%→45%, аренда 42%→27%, тренировки 26%→16%. Новичок доходит до курса, но <b>не закрепляется в клубе</b>. H1'26 чуть недозрел (апр–июн), т.е. реальный разрыв не больше показанного.</div>
   </div>
 </div>
 
@@ -114,29 +114,29 @@ th,td{padding:8px 10px;text-align:right;border-bottom:1px solid #2d3148} th{colo
 <h2 class="section cyan">Блок 4 · Конверсия по тренерам (кто доводит новичка ВЗ→ВК→регуляр)</h2>
 <div class="grid2">
   <div class="funnel">
-    <h3 style="font-size:13px;color:var(--muted);text-transform:uppercase;margin-bottom:14px">Когорта первого ВЗ с меткой тренера · янв'25–май'26 (n=481) · данные по 30.09</h3>
+    <h3 style="font-size:13px;color:var(--muted);text-transform:uppercase;margin-bottom:14px">Когорта первого ВЗ с меткой тренера · янв'25–июн'26 (n=501) · данные по 30.09</h3>
     <table>
       <tr><th>Тренер</th><th>ВЗ</th><th>→ВК</th><th>→регуляр</th><th>активны</th><th>ср.виз</th></tr>
-      <tr><td><b>Мила Егорова</b></td><td>100</td><td class="pos">55%</td><td class="pos">58%</td><td class="pos">21%</td><td>10,2</td></tr>
+      <tr><td><b>Мила Егорова</b></td><td>104</td><td class="pos">55%</td><td class="pos">58%</td><td class="pos">22%</td><td>10,4</td></tr>
       <tr><td>Катя Плотникова</td><td>35</td><td>51%</td><td>60%</td><td>9%</td><td>9,4</td></tr>
-      <tr><td>Костя Клюшев</td><td>54</td><td>39%</td><td>48%</td><td>13%</td><td>6,9</td></tr>
-      <tr><td>Евгений Урманов</td><td>109</td><td>36%</td><td>42%</td><td>12%</td><td>9,8</td></tr>
-      <tr><td>Игорь Гревцов</td><td>154</td><td class="neg">35%</td><td class="neg">40%</td><td class="neg">9%</td><td class="neg">5,1</td></tr>
+      <tr><td>Костя Клюшев</td><td>60</td><td>42%</td><td>52%</td><td>18%</td><td>7,2</td></tr>
+      <tr><td>Евгений Урманов</td><td>112</td><td>35%</td><td>41%</td><td>12%</td><td>9,6</td></tr>
+      <tr><td>Игорь Гревцов</td><td>161</td><td class="neg">34%</td><td class="neg">39%</td><td class="neg">9%</td><td class="neg">5,0</td></tr>
       <tr><td>Марк Косарев</td><td>14</td><td>36%</td><td>36%</td><td class="neg">0%</td><td>3,1</td></tr>
       <tr><td>Рита Сенченкова*</td><td>8</td><td>50%</td><td>75%</td><td>12%</td><td>7,5</td></tr>
       <tr><td>Давид Чирцов*</td><td>7</td><td>43%</td><td>71%</td><td>14%</td><td>5,9</td></tr>
-      <tr style="border-top:2px solid #2d3148"><td><b>В среднем</b></td><td>481</td><td>41%</td><td>48%</td><td>12%</td><td>7,7</td></tr>
+      <tr style="border-top:2px solid #2d3148"><td><b>В среднем</b></td><td>501</td><td>41%</td><td>47%</td><td>13%</td><td>7,7</td></tr>
     </table>
-    <p style="font-size:11px;color:var(--muted);margin-top:8px">* малая выборка (n&lt;10), проценты неустойчивы. Метка тренера стоит у 52% ВЗ. Сверка выручки с таблицей ЗП Drive: Рита 250 280 ₽ vs 263 000 ₽ (95%); у тренеров с группами метка занижает (тренер в названии услуги).</p>
+    <p style="font-size:11px;color:var(--muted);margin-top:8px">* малая выборка (n&lt;10), проценты неустойчивы. Метка тренера стоит у 53% ВЗ. Сверка выручки с таблицей ЗП Drive: Рита 250 280 ₽ vs 263 000 ₽ (95%); у тренеров с группами метка занижает (тренер в названии услуги).</p>
   </div>
   <div class="chart-card"><h3>Конверсия ВЗ → ВК / регуляр / активны, по тренерам</h3><div class="chart-wrap" style="height:340px"><canvas id="trainerConv"></canvas></div>
   <p style="font-size:11px;color:var(--muted);margin-top:8px">Показаны тренеры с ≥14 ВЗ. Размер круга/подпись — объём ВЗ.</p></div>
 </div>
 <div class="insights" style="margin-bottom:8px">
-  <div class="insight green"><b>Мила Егорова — лучший конвертер.</b> 100 ВЗ, →ВК 55%, →регуляр 58%, активны 21%, 10,2 визита/клиент. Выше среднего по всем этапам.</div>
-  <div class="insight red"><b>Игорь Гревцов — макс. объём, мин. отдача.</b> 154 ВЗ (треть всех), →ВК 35%, →регуляр 40%, активны 9%, 5,1 визита. Наибольший поток новичков с наихудшим удержанием.</div>
-  <div class="insight cyan"><b>Разброс конверсии ВЗ→ВК: 35–55%</b> при среднем 41%. Разница удержания (ср. визитов) — 3,1 до 10,2 (×3,3).</div>
-  <div class="insight orange"><b>Атрибуция.</b> 52% ВЗ с меткой тренера. Групповые тренировки кодируют тренера в названии услуги, не в метке → выручка тренеров с группами по меткам занижена. Проценты конверсии — внутри размеченной когорты.</div>
+  <div class="insight green"><b>Мила Егорова — лучший конвертер.</b> 104 ВЗ, →ВК 55%, →регуляр 58%, активны 22%, 10,4 визита/клиент. Выше среднего по всем этапам.</div>
+  <div class="insight red"><b>Игорь Гревцов — макс. объём, мин. отдача.</b> 161 ВЗ (треть всех), →ВК 34%, →регуляр 39%, активны 9%, 5,0 визита. Наибольший поток новичков с наихудшим удержанием.</div>
+  <div class="insight cyan"><b>Разброс конверсии ВЗ→ВК: 34–55%</b> при среднем 41%. Разница удержания (ср. визитов) — 3,1 до 10,4 (×3,4).</div>
+  <div class="insight orange"><b>Атрибуция.</b> 53% ВЗ с меткой тренера. Групповые тренировки кодируют тренера в названии услуги, не в метке → выручка тренеров с группами по меткам занижена. Проценты конверсии — внутри размеченной когорты.</div>
 </div>
 
 <!-- МЕТРИКИ -->
@@ -161,18 +161,18 @@ th,td{padding:8px 10px;text-align:right;border-bottom:1px solid #2d3148} th{colo
   <tr><td>Заявки (их метрика)</td><td>11</td><td>31</td><td>62</td><td>64</td><td class="neu">н/д</td><td style="text-align:left;color:var(--green)">Итого май–авг <b>168</b> · CPA заявки 849–1079 ₽</td></tr>
   <tr><td>ВЗ — попробовали (Yclients)</td><td>34</td><td>22</td><td>35</td><td>22</td><td>25</td><td style="text-align:left;color:var(--red)">сен 25 vs 61 год назад</td></tr>
   <tr><td>ВК — взяли курс (Yclients)</td><td>14</td><td>10</td><td>15</td><td>12</td><td>15</td><td style="text-align:left;color:var(--red)">сен 15 vs 38 год назад</td></tr>
-  <tr><td>Новые всего (Yclients)</td><td>67</td><td>64</td><td>85</td><td>54</td><td>57</td><td style="text-align:left;color:var(--red)">сен 57 vs 122 год назад</td></tr>
+  <tr><td>Новые всего (Yclients)</td><td>67</td><td>64</td><td>85</td><td>54</td><td>57</td><td style="text-align:left;color:var(--red)">сен 57 vs 122* год назад</td></tr>
   <tr><td>CAC дошедшего (расход/новые)</td><td>113 ₽</td><td>801 ₽</td><td>787 ₽</td><td>1 006 ₽</td><td class="neu">н/д</td><td style="text-align:left;color:var(--orange)">blended май–авг <b>667 ₽</b></td></tr>
   <tr><td>CAC по ВЗ (расход/ВЗ)</td><td>223 ₽</td><td>2 331 ₽</td><td>1 911 ₽</td><td>2 470 ₽</td><td class="neu">н/д</td><td style="text-align:left;color:var(--orange)">заявка ≠ клиент: разрыв ×2,3–2,9</td></tr>
 </table>
-<p style="font-size:11px;color:var(--muted);margin:6px 2px 0">* Май — запуск 27.05, ~4 дня открута → малый расход. &nbsp; Все 4 отчёта MARK7EVEN получены (май–авг). Сентябрь: Yclients — факт по 30.09; расход/заявки/CAC — н/д, ждём отчёт MARK7EVEN за сентябрь. &nbsp; ⚠️ В отдельном июльском отчёте РСЯ показан с фильтром «клики&gt;10» (48,7к/41 лид), в августовском сравнении июль полный — 66,9к/62 (ретаргетинг + догруженные конверсии). Взят полный.</p>
+<p style="font-size:11px;color:var(--muted);margin:6px 2px 0">* Май — запуск 27.05, ~4 дня открута → малый расход. &nbsp; * новые 2025: lookback &lt;12 мес (данные с 01.2025) — часть «новых» начала 2025 = вернувшиеся клиенты 2024. &nbsp; Все 4 отчёта MARK7EVEN получены (май–авг). Сентябрь: Yclients — факт по 30.09; расход/заявки/CAC — н/д, ждём отчёт MARK7EVEN за сентябрь. &nbsp; ⚠️ В отдельном июльском отчёте РСЯ показан с фильтром «клики&gt;10» (48,7к/41 лид), в августовском сравнении июль полный — 66,9к/62 (ретаргетинг + догруженные конверсии). Взят полный.</p>
 </div>
 
 <h3 style="color:var(--muted);font-size:13px;margin:22px 0 8px;text-transform:uppercase;letter-spacing:.5px">2. До агентства vs при агентстве (2026)</h3>
 <div class="verdict">
 <table>
   <tr><th>Метрика (среднее/мес)</th><th>До MARK7EVEN (янв–апр)</th><th>При MARK7EVEN (май–сен)</th><th>Δ</th></tr>
-  <tr><td>Вводные занятия ВЗ</td><td>54</td><td>28</td><td style="text-align:left;color:var(--red)">−48%</td></tr>
+  <tr><td>ВЗ — попробовали</td><td>53</td><td>28</td><td style="text-align:left;color:var(--red)">−47%</td></tr>
   <tr><td>Новые клиенты всего</td><td>110</td><td>65</td><td style="text-align:left;color:var(--red)">−40%</td></tr>
 </table>
 </div>
@@ -181,15 +181,16 @@ th,td{padding:8px 10px;text-align:right;border-bottom:1px solid #2d3148} th{colo
 <div class="verdict">
 <table>
   <tr><th>Метрика (сумма май–сен)</th><th>2025</th><th>2026</th><th>Δ</th></tr>
-  <tr><td>Вводные занятия ВЗ</td><td>384</td><td>141</td><td style="text-align:left;color:var(--red)">−63%</td></tr>
-  <tr><td>Новые клиенты всего</td><td>666</td><td>327</td><td style="text-align:left;color:var(--red)">−51%</td></tr>
+  <tr><td>ВЗ — попробовали</td><td>278</td><td>138</td><td style="text-align:left;color:var(--red)">−50%</td></tr>
+  <tr><td>Новые клиенты всего*</td><td>666</td><td>327</td><td style="text-align:left;color:var(--red)">−51%</td></tr>
 </table>
+<p style="font-size:11px;color:var(--muted);margin:6px 2px 0">* новые 2025: lookback &lt;12 мес (данные с 01.2025) — часть «новых» начала 2025 = вернувшиеся клиенты 2024.</p>
 </div>
 
 <div class="insights">
   <div class="insight orange"><b>Метрики кампаний.</b> CTR Поиск 11,7%→19,0%. Средняя позиция 4,11→2,22. CPA заявки 1 079→849 ₽. Работы по отчётам: чистка площадок РСЯ, ретаргетинг, отдельная РК на новичков.</div>
   <div class="insight red"><b>Заявки vs визиты.</b> Август: 64 заявки, 22 ВЗ, 54 новых клиента. CAC дошедшего 1 006 ₽, по ВЗ 2 470 ₽. CPA заявки по отчёту 849 ₽.</div>
-  <div class="insight red"><b>Динамика входа YoY (май–сен).</b> ВЗ −50% (278→138). ВК −41% (112→66). Новые клиенты −51% (666→327). Расход Директа 51–67к ₽/мес (июн–авг; сен — н/д).</div>
+  <div class="insight red"><b>Динамика входа YoY (май–сен).</b> ВЗ −50% (278→138). ВК −41% (112→66). Новые клиенты −51% (666→327)*. Расход Директа 51–67к ₽/мес (июн–авг; сен — н/д).</div>
   <div class="insight red"><b>Сезонность.</b> Летняя выручка сквоша −25% (рыночный ориентир). Расход Директа май–авг равномерный: 51–67к ₽/мес.</div>
   <div class="insight cyan"><b>Атрибуция.</b> Заявки Директа не сопоставлены с визитами Yclients. CPA заявки отражает лид, не оплатившего клиента.</div>
   <div class="insight orange"><b>Факторы спада.</b> Сезон, снижение входящего потока, конкуренция (October, Оптик В.О.), ценообразование. Разделение вкладов требует матчинга заявок по телефону. Расход предыдущего агентства (до мая) не предоставлен.</div>
@@ -250,10 +251,10 @@ new Chart(cmpYoY,{type:'bar',data:{labels:['ВЗ — попробовали','В
    scales:{x:{ticks:{color:tick,maxRotation:60,font:{size:10}},grid:{color:grid}},y:{suggestedMax:95,ticks:{color:tick},grid:{color:grid},title:{display:true,text:'ВЗ / мес',color:tick}}}}});
 })();
 
-new Chart(trainerConv,{type:'bar',data:{labels:['Игорь (154)','Евгений (109)','Мила (100)','Костя (54)','Катя (35)','Марк (14)'],datasets:[
- {label:'→ВК %',data:[35, 36, 55, 39, 51, 36],backgroundColor:'rgba(56,189,248,.85)'},
- {label:'→регуляр %',data:[40, 42, 58, 48, 60, 36],backgroundColor:'rgba(34,197,94,.8)'},
- {label:'активны %',data:[9, 12, 21, 13, 9, 0],backgroundColor:'rgba(245,158,11,.85)'}
+new Chart(trainerConv,{type:'bar',data:{labels:['Игорь (161)','Евгений (112)','Мила (104)','Костя (60)','Катя (35)','Марк (14)'],datasets:[
+ {label:'→ВК %',data:[34, 35, 55, 42, 51, 36],backgroundColor:'rgba(56,189,248,.85)'},
+ {label:'→регуляр %',data:[39, 41, 58, 52, 60, 36],backgroundColor:'rgba(34,197,94,.8)'},
+ {label:'активны %',data:[9, 12, 22, 18, 9, 0],backgroundColor:'rgba(245,158,11,.85)'}
 ]},options:{responsive:true,maintainAspectRatio:false,
  plugins:{legend:{labels:{color:'#94a3b8'}}},
  scales:{x:{ticks:{color:'#94a3b8',font:{size:11}},grid:{color:grid}},y:{ticks:{color:tick,callback:v=>v+'%'},grid:{color:grid},max:70}}}});
